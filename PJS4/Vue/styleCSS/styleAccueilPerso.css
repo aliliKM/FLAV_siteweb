@@ -22,15 +22,16 @@ a#titre.navbar-brand {
 }
 
 .btn {
-	background-color : rgb(22, 160, 133);
+	background-color : rgb(199, 144, 233);
 	color: white;
+	float:right;
 }
 .btn:hover {
-	background-color : rgb(22, 160, 133);
+	background-color : rgb(199, 144, 233);
 	color: white;
 }
 .btn:focus {
-	background-color : rgb(22, 160, 133);
+	background-color : rgb(199, 144, 233);
 	color: white;
 }
 
@@ -136,6 +137,25 @@ body{
 
 #toLeft{
 	float:right;
+}
+
+.flav{
+	margin-top:120px;
+}
+.flav h1{
+	text-align:center;
+	font-family:'Champagne';
+	font-size:10em;
+}
+
+button.close{
+	visibility:hidden;
+}
+
+#connect{
+	padding:20px;
+	margin:500px;		
+	margin-top:100px;		
 }
 
 .right{

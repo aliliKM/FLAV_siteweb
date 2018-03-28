@@ -16,30 +16,17 @@
 	</style>
 	
 	<body>
-		<div id=page>
-		<div class="row">
+		<div class=row>
 			<div class="col-sm-4 " id="bg"></div>
 			<div class="col-sm-4 contenu">
-				<div id="titre">
-					<h1>FLAV</h1>
+				<div class="flav">
+					<h1 class=titre>FLAV '</h1>
 				</div>
-				<button type="button" class="btn" data-toggle="modal" data-target="#connexion">Connexion</button>
-
 			</div>
-			<div class="col-sm-4 bg"></div>
-		</div>
-		
-			
+			</div>
 <!-- 		FORM CONNEXION			 -->
-
-
-
-			<!-- Modal -->
-				<div id="connexion" class="modal fade" role="dialog" >
-					<div class="modal-dialog">
-
 					<!-- Modal content-->
-					<div class="modal-content">
+					<div class="modal-content" id=connect>
 					    <div class="modal-header">
 						    <button type="button" class="close" data-dismiss="modal">&times;</button>
 						    <h4 class="modal-title">Connexion</h4>
@@ -67,10 +54,6 @@
 							</form>
 
 							</div>
-						</div>
-				</div>
-
-				</div>
-		</div>
+					</div>
 	</body>
 </html>
