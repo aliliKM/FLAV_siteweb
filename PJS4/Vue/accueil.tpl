@@ -1,5 +1,6 @@
 <html>
 	<head>
+  		<link rel="stylesheet" href="Vue/styleCSS/styleAccueilPerso.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -8,7 +9,6 @@
 	
 	<style>
 		h1 { color : #FFFFFF; }
-		body { background-color : #000000; color : #ffffff; } 
 		button {background-color : #FFFFFF; color : #000000;}
 		form { color: #000000;}
 		h4{color: #000000;}
@@ -16,6 +16,7 @@
 	</style>
 	
 	<body>
+		<div id=page>
 		<div class="row">
 			<div class="col-sm-4 " id="bg"></div>
 			<div class="col-sm-4 contenu">
@@ -69,6 +70,7 @@
 						</div>
 				</div>
 
-				</div>			
+				</div>
+		</div>
 	</body>
 </html>
