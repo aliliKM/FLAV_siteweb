@@ -5,6 +5,23 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- <link rel="stylesheet" href="vue\styleCSS\stylemenu.css"/> -->
 		
+		<style>
+		
+		h1 {
+			line-height: 0.8 !important;
+		}
+		
+		nav{
+			background-color: rgb(255,255,255, 0.9) !important;
+			border: none !important;
+		}
+		
+		li a {
+			color : black !important;
+		
+		}
+		
+		</style>
 	</head>
 	<body>
 	<div class="navbar-fixed-top">
@@ -20,18 +37,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>                        
 					  </button>
-					  <a class="navbar-brand" id="titre" href="#" ><h1 style="margin-top: 0px !important">FLAV'</h1></a>
+					  <a class="navbar-brand" id="titre" href="#" ><h1 style="margin-top: 0px !important; color: black !important">FLAV'</h1></a>
 					</div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 					  <ul class="nav navbar-nav">
-						<li class="active"><a href="index.php?controle=utilisateur&action=accueilProf">Accueil</a></li>
-						<li class="dropdown">
-						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Statistiques<span class="caret"></span></a>
-						  <ul class="dropdown-menu">
-							<li><a href="index.php?controle=utilisateur&action=statsEtu">Générales</a></li>
-							<li><a href="index.php?controle=utilisateur&action=statsIndiv">Par étudiant</a></li>
-						  </ul>
-						</li>
+						<li><a href="index.php?controle=utilisateur&action=accueilProf">Accueil</a></li>
+						<li><a href="index.php?controle=utilisateur&action=statsEtu">Statistiques</a></li>
 						<li><a href="index.php?controle=utilisateur&action=param">Paramétrage</a></li>
 
 					  </ul>

@@ -7,7 +7,7 @@
 		
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
 	
-		$select_membre= "select * from professeur where login = '%s' and mdp = '%s'"; 
+		$select_membre= "select * from professeur where login_professeur = '%s' and mdp_professeur = '%s'"; 
 		$req_membre = sprintf($select_membre,$login,$mdp);
 		
 		
@@ -33,7 +33,7 @@
 		
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
 	
-		$select_etu= "select * from etudiant order by nom"; 
+		$select_etu= "select * from etudiant order by nom_etu"; 
 		$req_etu = sprintf($select_etu);
 		
 		$res_etu = mysqli_query($link, $req_etu)	
@@ -45,11 +45,54 @@
 		else {
 			$resListeEtu= array();
 			while ($result = mysqli_fetch_assoc($res_etu) and isset($result)) {
-				$resListeEtu[] = array('id'=>$result['id_etu'],'nom'=>$result['nom'],'prenom'=>$result['prenom']);
+				$resListeEtu[] = array('id_etu'=>$result['id_etu'],'nom'=>$result['nom_etu'],'prenom'=>$result['prenom_etu']);
 			}
 			
 			return $resListeEtu;
 		}
+		
+	}
+	
+	function creerEtu($nom_etu,$prenom_etu,$login_etu,$mdp_etu){
+		
+		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
+		
+		$insert_etu= "insert into etudiant(nom_etu,prenom_etu, login_etu, mdp_etu) values ('%s','%s','%s','%s')"; 
+		$req_etu = sprintf($insert_etu, $nom_etu, $prenom_etu,$login_etu,$mdp_etu);
+		
+		$res_etu = mysqli_query($link, $req_etu)	
+			or die (utf8_encode("erreur de requête : " . $req_etu));
+		
+	}
+	
+	function suppEtu($nom_etu,$prenom_etu){
+
+		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
+		
+		$insert_etu= "delete from etudiant where nom_etu='%s' and prenom_etu='%s'"; 
+		$req_etu = sprintf($insert_etu, $nom_etu, $prenom_etu);
+		
+		$res_etu = mysqli_query($link, $req_etu)	
+			or die (utf8_encode("erreur de requête : " . $req_etu));
+		
+		
+	}
+		
+	function getListeCompetences(){
+	
+		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
+		
+		$select_competences = "select * from competence";
+		$req_competence = sprintf($select_competences);
+		
+		$res_competence = mysqli_query($link, $req_competence)
+			or die (utf8_encode("erreur de requête : " . $req_competence));
+		
+		$resListeCompetence= array();
+			while ($result = mysqli_fetch_assoc($res_competence) and isset($result)) {
+				$resListeCompetence[] = array('id_competence'=>$result['id_competence'],'intituleCompetence'=>$result['intituleCompetence']);
+			}
+		return $resListeCompetence;
 		
 	}
 

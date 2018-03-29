@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">s
+  <meta charset="utf-8">
 		<title>Accueil</title>
   		<link rel="stylesheet" href="Vue/styleCSS/styleAccueilPerso.css">
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">

@@ -10,7 +10,7 @@
 			if (verifS_ident($login, $mdp) && (verif_bd($login, $mdp) == -1)) {
 				$profil = "test";
 				$_SESSION['profil'] = $profil;
-				$nexturl = "index.php?controle=utilisateur&action=connexion";
+				$nexturl = "index.php?controle=utilisateur&action=accueilProf";
 				header ("Location: " . $nexturl);
 				return;
 			}
@@ -20,24 +20,37 @@
 	}
 
 	
+	function creerEtu_(){
+	
+		$nom=isset($_POST['nom'])?trim($_POST['nom']):'';
+		$prenom=isset($_POST['prenom'])?trim($_POST['prenom']):'';
+		$login=isset($_POST['login'])?trim($_POST['login']):'';
+		$mdp=isset($_POST['mdp'])?trim($_POST['mdp']):'';
+		
+		require ("./modele/utilisateurBD.php");
+		creerEtu($nom, $prenom, $login, $mdp);
+		$nexturl = "index.php?controle=utilisateur&action=param";
+		header ("Location: " . $nexturl);
+	}
+	
+	
+	function suppEtu_(){
+	
+		$nom=isset($_POST['nom'])?trim($_POST['nom']):'';
+		$prenom=isset($_POST['prenom'])?trim($_POST['prenom']):'';
+		
+		require ("./modele/utilisateurBD.php");
+		suppEtu($nom, $prenom);
+		$nexturl = "index.php?controle=utilisateur&action=param";
+		header ("Location: " . $nexturl);
+	}
+	
 	//CHARGEMENT PAGES
 	
-	function connexion() { 
-		require ("Vue/header.tpl") ;
-		require ("Vue/pageProf.tpl");
-	}
-
 	function statsEtu() {
 		require ("Vue/header.tpl");
-		require ("Vue/statsGeneralesProf.tpl");
-	}
-	
-	
-	function statsIndiv() {
-		require ("Vue/header.tpl");
-		require ("Vue/statsIndivProf.tpl");
-	}
-	
+		require ("Vue/statsProf.tpl");
+	}	
 	
 	function param() {
 		require ("Vue/header.tpl");
@@ -48,6 +61,8 @@
 		require ("Vue/header.tpl");
 		require ("Vue/pageProf.tpl");
 	}
+	
+
 	
 	// vérification syntaxique des saisies
 	// nom : composé de caractères alphanumériques et du tiret, chaîne non vide de 30 caractères maximum

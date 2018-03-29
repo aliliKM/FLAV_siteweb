@@ -139,6 +139,22 @@ body{
 	float:right;
 }
 
+.article{
+	background-color:#fff;
+	margin-bottom:20px;
+	
+}
+.page{
+	margin-top: 70px !important;
+	margin-left : auto !important;
+	margin-right : auto !important;
+}
+
+/* .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{ */
+	
+	/* background-color: #ffffff; */
+/* } */
+
 .flav{
 	margin-top:120px;
 }
@@ -146,6 +162,13 @@ body{
 	text-align:center;
 	font-family:'Champagne';
 	font-size:10em;
+}
+
+.titre_div{
+	font-family:'Champagne';
+	font-size:3em;
+	text-align: left;
+	
 }
 
 button.close{
