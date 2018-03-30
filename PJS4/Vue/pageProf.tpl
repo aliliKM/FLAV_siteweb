@@ -13,7 +13,7 @@
 <body>
 	<!-- <h1>FLAV'</h1> -->
 	<div class="intro" id="bienvenue">
-			<h1 class="titre">Bienvenue</br>P. <?php //echo($_SESSION['profil']['prenom']." ".$_SESSION['profil']['nom']);?>
+			<h1 class="titre">Bienvenue</br><?php echo(ucfirst($_SESSION['profil'])." !");?>
 	</h1>
 </body>
 </html>

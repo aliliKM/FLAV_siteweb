@@ -8,7 +8,7 @@
 		require ("./modele/utilisateurBD.php");
 		
 			if (verifS_ident($login, $mdp) && (verif_bd($login, $mdp) == -1)) {
-				$profil = "test";
+				$profil = $login;
 				$_SESSION['profil'] = $profil;
 				$nexturl = "index.php?controle=utilisateur&action=accueilProf";
 				header ("Location: " . $nexturl);
@@ -63,6 +63,7 @@
 	}
 	
 
+	
 	
 	// vérification syntaxique des saisies
 	// nom : composé de caractères alphanumériques et du tiret, chaîne non vide de 30 caractères maximum

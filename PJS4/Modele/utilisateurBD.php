@@ -95,6 +95,23 @@
 		return $resListeCompetence;
 		
 	}
-
 	
+	function getScore($idEtu, $idMiniJeu){
+		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
+	
+		$select_score= "select Score from jouer where id_etu = '%s' and id_miniJeu = '%s'"; 
+		$req_score = sprintf($select_score, $idEtu, $idMiniJeu);
+		
+		$res_score = mysqli_query($link, $req_score)	
+		or die (utf8_encode("erreur de requête : " . $req_score));
+		
+		if (mysqli_num_rows ($res_score) != 0)
+			return $res_score;
+		
+		else {
+		
+			return 0;
+		}
+	
+	}
 ?>

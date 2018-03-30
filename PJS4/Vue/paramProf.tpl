@@ -76,7 +76,7 @@
 		
 		
 			
-				<h3>Supprimer un étudiant</h3><div class="article"><div>
+			<h3>Supprimer un étudiant</h3><div class="article"><div>
 			<h5 class="titre_div">Supprimer un étudiant</h5>
 			<form class="form-horizontal" id="idformConnexion" action="index.php?controle=utilisateur&action=suppEtu_" method="post">
 				
@@ -108,6 +108,37 @@
 				</div>
 			</div>
 			
+			<!-- <h3>Modifier un exercice</h3><div class="article"><div> -->
+			<!-- <h5 class="titre_div">Modifier un exercice</h5> -->
+			<!-- <form class="form-horizontal" id="idformConnexion" action="index.php?controle=utilisateur&action=suppEtu_" method="post"> -->
+				
+				<!-- <div class="form-group">  -->
+					<!-- <div class="ui-widget"> -->
+						<!-- <label class="control-label col-sm-3" for="nom">Nom : </label> -->
+						<!-- <div class="col-sm-9">  -->
+							<!-- <input id="nom" class="form-control" placeholder="Entrez le nom de l'étudiant" name="nom" autofocus required> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div> -->
+				
+				<!-- <div class="form-group">  -->
+					<!-- <div class="ui-widget"> -->
+						<!-- <label class="control-label col-sm-3" for="prenom">Prénom : </label> -->
+						<!-- <div class="col-sm-9">  -->
+							<!-- <input id="prenom" class="form-control" placeholder="Entrez le prénom de l'étudiant" name="prenom" autofocus required> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div>	 -->
+	 
+				<!-- <div class="form-group">         -->
+					<!-- <div class="col-sm-offset-2 col-sm-10"> -->
+						<!-- <button type="submit" class="btn" >Supprimer</button> -->
+					<!-- </div> -->
+				<!-- </div> -->
+				
+			<!-- </form> -->
+				<!-- </div> -->
+			<!-- </div> -->
 			
 			
 		</div>
