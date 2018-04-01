@@ -135,6 +135,35 @@ body{
 	background-size: cover;
 }
 
+@media screen and (max-width: 1300px) {
+  body{
+		background-image: url("../img/3mondes.png");
+		background-size: 101% 60%;
+		overflow: hidden;
+}
+	}
+	
+	#connect{	
+		min-width:600px;
+		padding:2px;
+		margin:2px;
+		max-height:230px;		
+	}
+	
+	#connect.modal-content{
+		
+	margin-top:0px;
+	margin-left:350px;
+	}		
+
+	.flav h1{
+	text-align:center;
+	font-family:'Champagne';
+	font-size:2em;
+	}
+}
+
+
 #toLeft{
 	float:right;
 }
@@ -149,11 +178,6 @@ body{
 	margin-left : auto !important;
 	margin-right : auto !important;
 }
-
-/* .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{ */
-	
-	/* background-color: #ffffff; */
-/* } */
 
 .flav{
 	margin-top:120px;
