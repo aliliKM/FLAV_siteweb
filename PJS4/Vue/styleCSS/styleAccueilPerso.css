@@ -133,6 +133,8 @@ body{
 	background-image: url("../img/3mondes.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow : hidden;
+
 }
 
 @media screen and (max-width: 1300px) {

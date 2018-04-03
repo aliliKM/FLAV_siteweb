@@ -1,8 +1,8 @@
 ﻿<?php
 	$hote="localhost";   		
-	$login="koudosso";  		
-	$pass="koudosso"; 			
-	$bd="pweb17_koudosso"; 
+	$login="root";  		
+	$pass="root"; 			
+	$bd="bdd_pjs4"; 
 	
 
 		$link = mysqli_connect($hote, $login, $pass) 

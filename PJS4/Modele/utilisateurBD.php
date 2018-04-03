@@ -7,7 +7,7 @@
 		
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
 	
-		$select_membre= "select * from professeur where login_professeur = '%s' and mdp_professeur = '%s'"; 
+		$select_membre= "select * from professeur where loginProfesseur = '%s' and mdpProfesseur = '%s'"; 
 		$req_membre = sprintf($select_membre,$login,$mdp);
 		
 		
@@ -33,7 +33,7 @@
 		
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
 	
-		$select_etu= "select * from etudiant order by nom_etu"; 
+		$select_etu= "select * from etudiant order by nomEtudiant"; 
 		$req_etu = sprintf($select_etu);
 		
 		$res_etu = mysqli_query($link, $req_etu)	
@@ -45,19 +45,17 @@
 		else {
 			$resListeEtu= array();
 			while ($result = mysqli_fetch_assoc($res_etu) and isset($result)) {
-				$resListeEtu[] = array('id_etu'=>$result['id_etu'],'nom'=>$result['nom_etu'],'prenom'=>$result['prenom_etu']);
-			}
-			
+				$resListeEtu[] = array('id_etu'=>$result['idEtudiant'],'login_etu'=>$result['loginEtudiant'],'mdp_etu'=>$result['mdpEtudiant'],'nom_etu'=>$result['nomEtudiant'],'prenom_etu'=>$result['prenomEtudiant']);
+			}	
 			return $resListeEtu;
 		}
-		
 	}
 	
 	function creerEtu($nom_etu,$prenom_etu,$login_etu,$mdp_etu){
 		
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
 		
-		$insert_etu= "insert into etudiant(nom_etu,prenom_etu, login_etu, mdp_etu) values ('%s','%s','%s','%s')"; 
+		$insert_etu= "insert into etudiant(nomEtudiant,prenomEtudiant, loginEtudiant, mdpEtudiant) values ('%s','%s','%s','%s')"; 
 		$req_etu = sprintf($insert_etu, $nom_etu, $prenom_etu,$login_etu,$mdp_etu);
 		
 		$res_etu = mysqli_query($link, $req_etu)	
@@ -69,15 +67,14 @@
 
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
 		
-		$insert_etu= "delete from etudiant where nom_etu='%s' and prenom_etu='%s'"; 
+		$insert_etu= "delete from etudiant where nomEtudiant='%s' and prenomEtudiant='%s'"; 
 		$req_etu = sprintf($insert_etu, $nom_etu, $prenom_etu);
 		
 		$res_etu = mysqli_query($link, $req_etu)	
 			or die (utf8_encode("erreur de requête : " . $req_etu));
-		
-		
 	}
 		
+	
 	function getListeCompetences(){
 	
 		require ("./Modele/connectBD.php") ; //connexion $link à MYSQL et sélection de la base
@@ -90,10 +87,9 @@
 		
 		$resListeCompetence= array();
 			while ($result = mysqli_fetch_assoc($res_competence) and isset($result)) {
-				$resListeCompetence[] = array('id_competence'=>$result['id_competence'],'intituleCompetence'=>$result['intituleCompetence']);
+				$resListeCompetence[] = array('id_competence'=>$result['idCompetence'],'intituleCompetence'=>$result['intituleCompetence']);
 			}
 		return $resListeCompetence;
-		
 	}
 	
 	function getScore($idEtu, $idMiniJeu){

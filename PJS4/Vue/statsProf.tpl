@@ -47,32 +47,24 @@
 						require("./Modele/utilisateurBD.php");
 						$listeCompetences=getListeCompetences();
 						$_SESSION['comp']=$listeCompetences;
-						
 						foreach($_SESSION['comp'] as $competence){
 							echo("<th scope='col'>".$competence['intituleCompetence']."</th>");
 						}
-					?>	
-				
-					<!-- <th scope="col">Orthographe</th> -->
-
+					?>
 				</tr>
 				<tbody>
-				
 				<?php 
 					$tab_etu=getListeEtudiants();
 					$_SESSION['tabetu']=$tab_etu;
 					
 					foreach($_SESSION['tabetu'] as $etudiant){
 						echo("<tr><th scope=row'></th>");
-						echo("<td>".$etudiant['nom']."</td>");
-						echo("<td>".$etudiant['prenom']."</td>");
-	
+						echo("<td>".$etudiant['nom_etu']."</td>");
+						echo("<td>".$etudiant['prenom_etu']."</td>");
 					}
 				?>	
-				
 				<td><div class="progressbar"></div></td>
 				<td><div class="progressbar"></div></td>
-
 				</tr>
 				</tbody>
 				</table>

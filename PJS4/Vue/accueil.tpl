@@ -20,7 +20,7 @@
 			<div class="col-sm-4 " id="bg"></div>
 			<div class="col-sm-4 contenu">
 				<div class="flav">
-					<h1 class=titre>FLAV '</h1>
+					<h1 class=titre><img src="Vue/img/logo.png" /></h1>
 				</div>
 			</div>
 			</div>
